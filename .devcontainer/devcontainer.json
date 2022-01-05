@@ -1,0 +1,41 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.209.6/containers/ubuntu
+{
+	"name": "Flutter",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { 
+			// Update 'VARIANT' to pick an Ubuntu version: hirsute, focal, bionic
+			// Use hirsute or bionic on local arm64/Apple Silicon.
+			"VARIANT": "focal",
+			// Android SDK command line tools version, see https://developer.android.com/studio/#downloads
+			"SDK_TOOLS_LINUX_VERSION": "7583922_latest", 
+			// Android platform version, see https://developer.android.google.cn/studio/releases/platforms
+			"ANDROID_PLATFORM_VERSION": "29",
+			// Android build tools, see https://developer.android.google.cn/studio/releases/build-tools
+			"ANDROID_BUILD_TOOLS_VERSION": "30.0.2",
+			// Fluter channel type [stable, beta, dev], see https://docs.flutter.dev/development/tools/sdk/releases?tab=linux
+			"FLUTTER_CHANNEL": "stable",
+			// Flutter version, see https://docs.flutter.dev/development/tools/sdk/releases?tab=linux
+			"FLUTTER_VERSION": "2.8.1"
+		}
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dart-code.dart-code",
+		"dart-code.flutter"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
